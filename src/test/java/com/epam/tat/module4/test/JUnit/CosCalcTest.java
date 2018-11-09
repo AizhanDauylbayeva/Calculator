@@ -3,12 +3,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
 import java.util.Arrays;
 import java.util.Collection;
-
-import static java.lang.Math.round;
-
 
 @RunWith(Parameterized.class)
 public class CosCalcTest extends BaseCalcJunitTest {
@@ -36,7 +32,7 @@ public class CosCalcTest extends BaseCalcJunitTest {
 
     @Test
     public void testCos() {
-        double result = round(calc.cos(Math.toRadians(a)));
+        double result = calc.cos(Math.toRadians(a));
         Assert.assertEquals("Cos(" + a + ") = is NOT equal " + result, expected, result, 0);
     }
 }

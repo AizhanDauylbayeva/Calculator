@@ -33,6 +33,6 @@ public class SumDoubleTest extends BaseCalcJunitTest {
     @Test
     public void testSum() {
         double result = calc.sum(a, b);
-        Assert.assertEquals("Sum(" + a / b + ") = is NOT equal " + result, expected, result, 0);
+        Assert.assertEquals("Sum(" + a +" + "+ b + ") = is NOT equal " + result, expected, result, 0);
     }
 }
