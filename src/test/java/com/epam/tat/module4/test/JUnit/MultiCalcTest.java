@@ -9,11 +9,11 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class SubCalcTest extends BaseCalcJunitTest{
+public class MultiCalcTest extends BaseCalcJunitTest{
     private long a, b;
     private long expected;
 
-    public SubCalcTest(long a, long b, long expected) {
+    public MultiCalcTest(long a, long b, long expected) {
         this.a = a;
         this.b = b;
         this.expected = expected;
@@ -22,17 +22,17 @@ public class SubCalcTest extends BaseCalcJunitTest{
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {10, 12, -2 },
-                {10, 10, 0 },
-                {0, 36, -36 },
-                {-10, -20, 10 },
-                {-9223372036854775807L , -9223372036854775808L, 1 }
+                {10, 5, 50 },
+                {10, -2, -20 },
+                {-4, -2, 8 },
+                {0, 2, 0 }
         });
     }
 
     @Test
-    public void testSub() {
-        long result = calc.sub(a,b);
-        Assert.assertEquals("Sum(" + a +" - "+ b + ") = is NOT equal " + result, expected, result, 0);
+    public void testMulti() {
+        long result = calc.mult(a, b);
+        Assert.assertEquals("Multi(" + a / b + ") = is NOT equal " + result, expected, result, 0);
     }
 }
+

@@ -6,7 +6,7 @@ public class BaseCalcJunitTest {
     protected static Calculator calc;
 
     @BeforeClass
-    protected static void setUp() {
+    public static void setUp() {
         System.out.println("Prepare instance of Calculator");
         calc = new Calculator();
     }

@@ -7,8 +7,6 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static java.lang.Math.round;
-
 @RunWith(Parameterized.class)
 public class SinCalcTest extends BaseCalcJunitTest {
     private double a;
@@ -19,8 +17,8 @@ public class SinCalcTest extends BaseCalcJunitTest {
         return Arrays.asList(new Object[][]{
                 {0, 0.0},
                 {30, 0.5},
-                {45, 0.7071},
-                {60, 0.8660},
+                {45, 0.7071067811865475},
+                {60, 0.8660254037844386},
                 {90, 1.0},
                 {180, 0.0},
                 {270, -1.0},
@@ -35,7 +33,7 @@ public class SinCalcTest extends BaseCalcJunitTest {
 
     @Test
     public void testSin() {
-        double result = round(calc.sin(Math.toRadians(a)));
+        double result = calc.sin(Math.toRadians(a));
         Assert.assertEquals("Sin(" + a + ") = is NOT equal " + result, expected, result, 0);
     }
 }

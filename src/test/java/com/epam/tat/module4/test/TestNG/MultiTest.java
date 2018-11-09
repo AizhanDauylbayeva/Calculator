@@ -4,16 +4,15 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class MultTest extends BaseCalcTest {
-
-    @Test(dataProvider = "MultDataProvider")
-    public void testMult(long a, long b, long expected) {
-        long mult = calc.mult(a, b);
-        Assert.assertEquals(mult, expected);
+public class MultiTest extends BaseCalcTest{
+    @Test(dataProvider = "MultiDataProvider")
+    public void testMulti(long a, long b, long expected) {
+        long Multi = calc.mult(a, b);
+        Assert.assertEquals(Multi, expected);
     }
 
-    @DataProvider(name = "MultDataProvider")
-    public static Object[][] MultDataProvider(){
+    @DataProvider(name = "MultiDataProvider")
+    public static Object[][] MultiDataProvider(){
         return new Object[][] {
                 {10, 5, 50 },
                 {10, -2, -20 },
@@ -22,14 +21,14 @@ public class MultTest extends BaseCalcTest {
         };
     }
 
-    @Test(dataProvider = "MultDoubleDataProvider")
-    public void testMultDouble(double a, double b, double expected) {
+    @Test(dataProvider = "MultiDoubleDataProvider")
+    public void testMultiDouble(double a, double b, double expected) {
         double mult = calc.mult(a, b);
         Assert.assertEquals(mult, expected);
     }
 
-    @DataProvider(name = "MultDoubleDataProvider")
-    public static Object[][] MultDoubleDataProvider(){
+    @DataProvider(name = "MultiDoubleDataProvider")
+    public static Object[][] MultiDoubleDataProvider(){
         return new Object[][] {
                 {10.2, 2, 20.4 },
                 {10, -2.5, -25 },
@@ -37,5 +36,4 @@ public class MultTest extends BaseCalcTest {
                 {0.8, 0.4, 0.32 }
         };
     }
-
 }

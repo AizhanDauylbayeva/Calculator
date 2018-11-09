@@ -1,13 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-    <suite name = "Calculator" verbose = "1" parallel = "false">
-    <test name = "Calculator">
+    <suite name = "Calculator">
+    <test name = "TestNG">
         <classes>
             <class name = "com.epam.tat.module4.test.TestNG.SumTest"></class>
             <class name = "com.epam.tat.module4.test.TestNG.SubTest"></class>
             <class name = "com.epam.tat.module4.test.TestNG.NumberFormatExceptionTest"></class>
             <class name = "com.epam.tat.module4.test.TestNG.PositiveNegativeTest"></class>
-            <class name = "com.epam.tat.module4.test.TestNG.MultTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.MultiTest"></class>
             <class name = "com.epam.tat.module4.test.TestNG.DivTest"></class>
             <class name = "com.epam.tat.module4.test.TestNG.SqrtTest"></class>
             <class name = "com.epam.tat.module4.test.TestNG.PowTest"></class>

@@ -18,14 +18,14 @@ public class CosCalcTest extends BaseCalcJunitTest {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {0, 1},
-                {30, 0.8660},
-                {45, 0.7071},
+                {0, 1.0},
+                {30, 0.8660254037844386},
+                {45, 0.7071067811865475},
                 {60, 0.5},
-                {90, 0},
-                {180, -1},
-                {270, 0},
-                {360, 1},
+                {90, 0.0},
+                {180, -1.0},
+                {270, 0.0},
+                {360, 1.0},
         });
     }
 

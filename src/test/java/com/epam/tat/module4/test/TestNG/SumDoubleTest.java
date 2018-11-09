@@ -5,13 +5,13 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Factory;
 import org.testng.annotations.Test;
 
-public class SumTest extends BaseCalcTest {
-    private long a;
-    private long b;
-    private long expected;
+public class SumDoubleTest extends BaseCalcTest{
+    private double a;
+    private double b;
+    private double expected;
 
     @Factory(dataProvider = "SumDataProvider")
-    public SumTest(long a, long b, long expected) {
+    public SumDoubleTest(double a, double b, double expected) {
         this.a = a;
         this.b = b;
         this.expected = expected;
@@ -19,18 +19,17 @@ public class SumTest extends BaseCalcTest {
 
     @Test
     public void testSum(){
-        long sum = calc.sum(a, b);
+        double sum = calc.sum(a, b);
         Assert.assertEquals(sum, expected);
     }
 
     @DataProvider(name = "SumDataProvider")
     public static Object[][] SumDataProvider(){
         return new Object[][] {
-                {10, 12, 22 },
-                {10, -10, 0 },
-                {0, 36, 36 },
-                {-10, -20, -30 },
-                {-9223372036854775808L , 9223372036854775807L, -1 }
+                {10.2, 2, 12.2 },
+                {10, -2.5, 7.5 },
+                {-2.4, 1, -1.4 },
+                {0.8, 0.4, 1.2 }
         };
     }
 }
