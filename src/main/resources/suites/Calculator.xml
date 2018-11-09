@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+    <suite name = "Calculator" verbose = "1" parallel = "false">
+    <test name = "Calculator">
+        <classes>
+            <class name = "com.epam.tat.module4.test.TestNG.SumTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.SubTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.NumberFormatExceptionTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.PositiveNegativeTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.MultTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.DivTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.SqrtTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.PowTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.SinTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.CosTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.TgTest"></class>
+            <class name = "com.epam.tat.module4.test.TestNG.CtgTest"></class>
+        </classes>
+    </test>
+        </suite>
